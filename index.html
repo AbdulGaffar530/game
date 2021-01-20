@@ -1,66 +1,101 @@
 <html>
-<head>
-<title>Javascript game</title>
+   <head>
+      <title>Javascript game</title>
 
-<style>
-body{width:100%; margin-left: 0 auto;}
-.field{width: 600px;}
-.ghor{width: 150px; height: 150px; border: 2px solid purple; float: left;}
-h1{text-shadow: 2px 5px 12px blue; font-size: 45px; color: white;}
-h2{font-size: 45px;}
+      <style>
+         body {
+            width: 100%;
+            margin-left: 0 auto;
+         }
+         .field {
+            width: 600px;
+         }
+         .ghor {
+            width: 150px;
+            height: 150px;
+            border: 2px solid purple;
+            float: left;
+         }
+         h1 {
+            text-shadow: 2px 5px 12px blue;
+            font-size: 45px;
+            color: white;
+         }
+         h2 {
+            font-size: 45px;
+         }
+         .blue {
+            color: blue;
+            font-size: 30px;
+         }
+      </style>
+   </head>
+   <body>
+      <h2 id="h2">amar sonar bangla</h2>
 
-</style>
-</head>
-<body>
+      <div class="field">
+         <div class="ghor"></div>
+         <div class="ghor"></div>
+         <div class="ghor"></div>
+         <div class="ghor"></div>
+         <div class="ghor"></div>
+         <div class="ghor"></div>
+         <div class="ghor"></div>
+         <div class="ghor"></div>
+         <div class="ghor"></div>
+      </div>
+      <!-- <h1>Abdul Gaffar as a JavaScript Programr</h1> -->
+      <!-- <script src="jquery.js"></script> -->
+      <script>
+         // $("h2").text("Click to box, and showed you Magic.");
+         document.getElementById("h2").innerHTML =
+            "Click on the boxes and see magic!";
 
-<h2> amar sonar bangla</h2>
+         // heading();
+         // var count = 0;
+         // $(".ghor").click(function () {
+         //    count = count + 1;
+         //    $(this).text(count);
+         // });
+         // $(".ghor").click(function () {
+         //    $(this).css("background-color", "red");
+         // });
 
-<div class="field">
- <div class="ghor"></div>
- <div class="ghor"></div>
- <div class="ghor"></div>
- <div class="ghor"></div>
- <div class="ghor"></div>
- <div class="ghor"></div>
- <div class="ghor"></div>
- <div class="ghor"></div>
- <div class="ghor"></div>
-</div>
-<h1>Abdul Gaffar as a JavaScript Programr</h1>
-<script src="jquery.js"></script>
-<script>
-$("h2").text("Click to box, and showed you Magic.");
+         // $(".ghor").click(function () {
+         //    $(this).css("font-size", "90px");
+         // });
 
-var count = 0;
-$(".ghor").click(function (){count = count + 1;
-$(this).text(count);
-})
-$(".ghor").click(function(){
-$(this).css("background-color", "red");
-});
+         // $(".ghor").click(function () {
+         //    $(this).css("text-align", "center");
+         // });
 
-$(".ghor").click(function(){
-  $(this).css("font-size", "90px");
-});
+         // $(".ghor").click(function () {
+         //    $(this).css("color", "white");
+         // });
 
-$(".ghor").click(function(){
-  $(this).css("text-align", "center");
-});
+         // $(".ghor").click(function () {
+         //    $(this).css("font-weight", "bold");
+         // });
 
-$(".ghor").click(function(){
-  $(this).css("color", "white");
-});
+         // $(".ghor").click(function () {
+         //    $(this).css("text-shadow", "3px 6px 9px yellow");
+         // });
 
-$(".ghor").click(function(){
-  $(this).css("font-weight", "bold");
-});
+         const field = document.querySelector(".field");
+         const ghor = document.querySelectorAll(".ghor");
 
-
-$(".ghor").click(function(){
-  $(this).css("text-shadow", "3px 6px 9px yellow");
-});
-
-</script>
-</body>
+         var count = 0;
+         field.addEventListener("click", (e) => {
+            count = count + 1;
+            e.target.innerHTML = count;
+            e.target.style.cssText = `color: green;
+            font-size: 90px;
+            background-color: red;
+            text-align: center;
+            color: white;
+            font-weight: bold;
+            text-shadow: 3px 6px 9px yellow`;
+         });
+      </script>
+   </body>
 </html>
-
