@@ -1,0 +1,66 @@
+<html>
+<head>
+<title>Javascript game</title>
+
+<style>
+body{width:100%; margin-left: 0 auto;}
+.field{width: 600px;}
+.ghor{width: 150px; height: 150px; border: 2px solid purple; float: left;}
+h1{text-shadow: 2px 5px 12px blue; font-size: 45px; color: white;}
+h2{font-size: 45px;}
+
+</style>
+</head>
+<body>
+
+<h2> amar sonar bangla</h2>
+
+<div class="field">
+ <div class="ghor"></div>
+ <div class="ghor"></div>
+ <div class="ghor"></div>
+ <div class="ghor"></div>
+ <div class="ghor"></div>
+ <div class="ghor"></div>
+ <div class="ghor"></div>
+ <div class="ghor"></div>
+ <div class="ghor"></div>
+</div>
+<h1>Abdul Gaffar as a JavaScript Programr</h1>
+<script src="jquery.js"></script>
+<script>
+$("h2").text("Click to box, and showed you Magic.");
+
+var count = 0;
+$(".ghor").click(function (){count = count + 1;
+$(this).text(count);
+})
+$(".ghor").click(function(){
+$(this).css("background-color", "red");
+});
+
+$(".ghor").click(function(){
+  $(this).css("font-size", "90px");
+});
+
+$(".ghor").click(function(){
+  $(this).css("text-align", "center");
+});
+
+$(".ghor").click(function(){
+  $(this).css("color", "white");
+});
+
+$(".ghor").click(function(){
+  $(this).css("font-weight", "bold");
+});
+
+
+$(".ghor").click(function(){
+  $(this).css("text-shadow", "3px 6px 9px yellow");
+});
+
+</script>
+</body>
+</html>
+>
